@@ -1,1 +1,93 @@
-import*as t from"@wordpress/interactivity";var e={d:(t,r)=>{for(var o in r)e.o(r,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:r[o]})},o:(t,e)=>Object.prototype.hasOwnProperty.call(t,e)};const r=(o={getContext:()=>t.getContext,getElement:()=>t.getElement,store:()=>t.store},n={},e.d(n,o),n);var o,n;(0,r.store)("goodmotion/marvelous-tab",{state:{get isShow(){const t=(0,r.getContext)(),{attributes:e}=(0,r.getElement)();return e.id===t.current},get tabIsShow(){const t=(0,r.getContext)(),{attributes:e}=(0,r.getElement)(),o=`tab-${t.current.replace("section-","")}`;return e.id===o}},actions:{showTab:()=>{const t=(0,r.getContext)(),{ref:e}=(0,r.getElement)();t.current=e.dataset.target}}});
+import * as __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__ from "@wordpress/interactivity";
+/******/ var __webpack_modules__ = ({
+
+/***/ "@wordpress/interactivity":
+/*!*******************************************!*\
+  !*** external "@wordpress/interactivity" ***!
+  \*******************************************/
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__;
+
+/***/ })
+
+/******/ });
+/************************************************************************/
+/******/ // The module cache
+/******/ var __webpack_module_cache__ = {};
+/******/ 
+/******/ // The require function
+/******/ function __webpack_require__(moduleId) {
+/******/ 	// Check if module is in cache
+/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	if (cachedModule !== undefined) {
+/******/ 		return cachedModule.exports;
+/******/ 	}
+/******/ 	// Create a new module (and put it into the cache)
+/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 		// no module.id needed
+/******/ 		// no module.loaded needed
+/******/ 		exports: {}
+/******/ 	};
+/******/ 
+/******/ 	// Execute the module function
+/******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 
+/******/ 	// Return the exports of the module
+/******/ 	return module.exports;
+/******/ }
+/******/ 
+/************************************************************************/
+/******/ /* webpack/runtime/make namespace object */
+/******/ (() => {
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/ })();
+/******/ 
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!*******************************!*\
+  !*** ./src/tab-group/view.js ***!
+  \*******************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "@wordpress/interactivity");
+
+(0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('goodmotion/marvelous-tab', {
+  state: {
+    get isShow() {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      const {
+        attributes
+      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
+      return attributes.id === context.current;
+    },
+    get tabIsShow() {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      const {
+        attributes
+      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
+      const tab = `tab-${context.current.replace('section-', '')}`;
+      return attributes.id === tab;
+    }
+  },
+  actions: {
+    showTab: () => {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      const {
+        ref
+      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
+      context.current = ref.dataset.target;
+    }
+  }
+});
+})();
+
+
+//# sourceMappingURL=view.js.map

@@ -8,6 +8,9 @@
   "icon": "index-card",
   "description": "Tab item",
   "example": {},
+  "parent": [
+    "goodmotion/tab-group"
+  ],
   "attributes": {
     "title": {
       "type": "string",

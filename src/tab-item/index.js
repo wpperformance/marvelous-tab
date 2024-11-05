@@ -1,15 +1,15 @@
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from "@wordpress/blocks";
 
-import './style.scss';
+import "./style.scss";
 
-import Edit from './edit';
+import Edit from "./edit";
 import Save from "./save";
-import metadata from './block.json';
+import metadata from "./block.json";
 
-registerBlockType( metadata.name, {
+registerBlockType(metadata.name, {
 	/**
 	 * @see ./edit.js
 	 */
 	edit: Edit,
-	save: Save
-} );
+	save: Save,
+});
