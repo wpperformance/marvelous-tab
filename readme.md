@@ -12,7 +12,11 @@ In the editor, add a tab group block and then insert tab item blocks inside it.
 
 ## Testing
 
-In the root directory, to launch the WordPress Playground, run:
+Try directly in the browser.
+
+[Playground](https://playground.wordpress.net/?mode=seamless#{%22landingPage%22:%22/wp-admin/plugins.php%22,%22steps%22:[{%22step%22:%22installPlugin%22,%22pluginData%22:{%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy/?repo=wpperformance/marvelous-tab%22}}],%22login%22:true})
+
+Or in the root directory, to launch the WordPress Playground, run:
 
 ```bash
 npx @wp-now/wp-now start --php=8.3
