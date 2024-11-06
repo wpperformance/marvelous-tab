@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { InnerBlocks, useBlockProps, store } from "@wordpress/block-editor";
-import { useSelect } from "@wordpress/data";
+import { useDispatch, useSelect } from "@wordpress/data";
 
 import "./editor.scss";
 
@@ -8,6 +8,7 @@ const allowedBlocks = ["goodmotion/tab-item"];
 
 export default function Edit(props) {
 	const { clientId, setAttributes, attributes } = props;
+	const { selectBlock } = useDispatch("core/block-editor");
 	// get innerBlock content
 	const innerBlocks = useSelect(
 		(select) => select(store).getBlock(clientId).innerBlocks,
@@ -19,12 +20,17 @@ export default function Edit(props) {
 		}
 	}, []);
 
+	const selectTab = ({ clientId }) => {
+		setAttributes({ showID: clientId });
+		selectBlock(clientId);
+	};
+
 	return (
 		<div {...useBlockProps()}>
 			<div className="tab-control">
 				{innerBlocks.map((block) => (
 					<button
-						onClick={() => setAttributes({ showID: block.clientId })}
+						onClick={() => selectTab(block)}
 						className={
 							block.clientId === attributes.showID ? "tab-is-active" : ""
 						}
