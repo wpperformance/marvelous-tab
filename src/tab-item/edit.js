@@ -24,6 +24,10 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			{...useBlockProps({
 				className: `${showID === clientId ? "" : "tab-is-hidden"}`,
 			})}
+			role="tabpanel"
+			id={`tab-content-${clientId}`}
+			aria-labelledby={`tab-content-${clientId}`}
+			aria-hidden={clientId !== showID}
 		>
 			<InspectorControls>
 				<PanelBody title={__("Infos", "marvelous-tab")}>

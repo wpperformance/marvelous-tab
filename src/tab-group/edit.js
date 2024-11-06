@@ -26,14 +26,22 @@ export default function Edit(props) {
 	};
 
 	return (
-		<div {...useBlockProps()}>
-			<div className="tab-control">
+		<div
+			{...useBlockProps()}
+			aria-label="Tab control"
+			aria-labelledby="tab-control-label"
+		>
+			<div className="tab-control" id="tab-control-label" role="tablist">
 				{innerBlocks.map((block) => (
 					<button
 						onClick={() => selectTab(block)}
-						className={
+						className={`${
 							block.clientId === attributes.showID ? "tab-is-active" : ""
-						}
+						}`}
+						id={`tab-${innerBlocks[0].clientId}`}
+						role="tab"
+						aria-selected={block.clientId === attributes.showID}
+						aria-controls={`tab-content-${block.clientId}`}
 					>
 						{block.attributes.title}
 					</button>

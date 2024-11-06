@@ -18,7 +18,7 @@ store("goodmotion/marvelous-tab", {
 		showTab: () => {
 			const context = getContext();
 			const { ref } = getElement();
-			context.current = ref.dataset.target;
+			context.current = ref.getAttribute("aria-controls");
 		},
 	},
 });
